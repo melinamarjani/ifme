@@ -2,6 +2,8 @@
 require 'sidekiq/web'
 require 'sidekiq/cron/web'
 Rails.application.routes.draw do
+  get 'progress', to: 'progress#index'
+  get '/mood_trends', to: 'mood_trends#index'
   get 'errors/not_found'
   get 'errors/internal_server_error'
 
@@ -151,6 +153,3 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 end
-
-get '/mood_trends', to: 'mood_trends#index'
-
