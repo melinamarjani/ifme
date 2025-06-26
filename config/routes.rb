@@ -151,3 +151,6 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 end
+
+get '/mood_trends', to: 'mood_trends#index'
+
